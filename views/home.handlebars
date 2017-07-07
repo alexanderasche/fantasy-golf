@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form method="POST" action="/tierOne">
+    <input list="tierOne" name="tierOne" placeholder="Player Rank 1-10">
+    <datalist id="tierOne">
+      {{#players.tierOne}}
+        <option>({{ranking}}) {{name}}</option>
+      {{/players.tierOne}}
+    </datalist>
+    <button type="submit">Add Player</button>
+  </form>
+  <form method="POST" action="/tierTwo">
+    <input list="tierTwo" name="tierTwo" placeholder="Player Rank 11-20">
+    <datalist id="tierTwo">
+      {{#players.tierTwo}}
+        <option>({{ranking}}) {{name}}</option>
+      {{/players.tierTwo}}
+    </datalist>
+    <button type="submit">Add Player</button>
+  </form>
+  <form method="POST" action="/tierThree">
+    <input list="tierThree" name="tierThree" placeholder="Player Rank 21-40">
+    <datalist id="tierThree">
+      {{#players.tierThree}}
+        <option>({{ranking}}) {{name}}</option>
+      {{/players.tierThree}}
+    </datalist>
+    <button type="submit">Add Player</button>
+  </form>
+  <form method="POST" action="/tierFour">
+    <input list="tierFour" name="tierFour" placeholder="Player Rank 41+">
+    <datalist id="tierFour">
+      {{#players.tierFour}}
+        <option>({{ranking}}) {{name}}</option>
+      {{/players.tierFour}}
+    </datalist>
+    <button type="submit">Add Player</button>
+  </form>
+</body>
+</html>
